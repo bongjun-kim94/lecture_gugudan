@@ -1,5 +1,6 @@
 const path = require('path');
 const { webpack } = require('webpack');
+const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 
 module.exports = {
     mode: 'development', //production, development
@@ -29,6 +30,9 @@ module.exports = {
             }
         }]
     },
+    plugins: [
+        new LoaderOptionsPlugin({ debug: true }),
+    ],
     output: {
         filename: 'app.js',
         path: path.join(__dirname, 'dist'),
