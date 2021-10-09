@@ -1,5 +1,5 @@
 const React = require('react');
-const { useStatem, useRef } = React;
+const { useState, useRef } = React;
 
 const GuGuDan = () => {
     // state, setState
